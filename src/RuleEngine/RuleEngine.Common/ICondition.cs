@@ -1,4 +1,4 @@
-﻿namespace RuleEngine.Console
+﻿namespace RuleEngine.Common
 {
     public interface ICondition<TInput>
     {

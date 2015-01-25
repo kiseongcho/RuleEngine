@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Linq.Expressions;
 using System.Reflection;
-namespace RuleEngine.Console
+using RuleEngine.Common;
+
+namespace RuleEngine.StringRules
 {
     public class StringConditionEvaluator<TInput> : IConditionEvaluator<string, TInput>
     {

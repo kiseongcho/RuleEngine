@@ -1,12 +1,12 @@
 ﻿using System.Collections.Generic;
 
-namespace RuleEngine.Console
+namespace RuleEngine.Common
 {
-    //shoud this be abstract class?
-    public abstract class RuleEngine<TInput, TCondition>
+    //TODO how can i remove TCondition from this class?
+    public abstract class RuleEngine<TCondition, TInput>
     {
         private readonly IConditionEvaluator<TCondition, TInput> _conditionEvaluator;
-        public IList<DecisionStep<TCondition, TInput>> DecisionSteps { get; set; }
+        public IList<IDecisionStep<TCondition, TInput>> DecisionSteps { get; set; }
 
         protected RuleEngine(IConditionEvaluator<TCondition, TInput> conditionEvaluator)
         {
